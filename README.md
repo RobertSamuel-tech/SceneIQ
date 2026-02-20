@@ -69,112 +69,20 @@ Relationships (interaction graph)
 Importance (why it matters)
 
 Each scene becomes:
-
-𝑆
-𝑖
-=
-(
-𝑇
-𝑖
-,
-𝐸
-𝑖
-,
-𝑂
-𝑖
-,
-𝑀
-𝑖
-,
-𝑅
-𝑖
-,
-𝐼
-𝑖
-)
-S
-i
-	​
-
-=(T
-i
-	​
-
-,E
-i
-	​
-
-,O
-i
-	​
-
-,M
-i
-	​
-
-,R
-i
-	​
-
-,I
-i
-	​
-
-)
+Si​=(Ti​,Ei​,Oi​,Mi​,Ri​,Ii​)
 
 Where:
-
-𝑇
-𝑖
-T
-i
-	​
-
- → Time boundary
-
-𝐸
-𝑖
-E
-i
-	​
-
- → Persistent entities
-
-𝑂
-𝑖
-O
-i
-	​
-
- → Objects
-
-𝑀
-𝑖
-M
-i
-	​
-
- → Motion intensity
-
-𝑅
-𝑖
-R
-i
-	​
-
- → Interaction graph
-
-𝐼
-𝑖
-I
-i
-	​
-
- → Importance score
+​
+Ti→ Time boundary
+Ei→ Persistent entities
+Oi→ Objects
+Mi→ Motion intensity
+Ri→ Interaction graph
+Ii→ Importance score
 
 Video → Structured Scene Graph.
 
- System Architecture
+System Architecture:
 Video Input
      ↓
 Structural Scene Segmentation
@@ -206,48 +114,7 @@ Result → Scene-level units, not raw frames.
 2️ Persistent Entity Modeling
 Each tracked entity:
 
-𝑒
-𝑗
-=
-{
-(
-𝑥
-𝑡
-,
-𝑦
-𝑡
-)
-}
-𝑡
-=
-𝑡
-1
-𝑡
-2
-e
-j
-	​
-
-={(x
-t
-	​
-
-,y
-t
-	​
-
-)}
-t=t
-1
-	​
-
-t
-2
-	​
-
-	​
-
-
+ej​={(xt​,yt​)}t=t1​t2​​
 Track ID continuity enables:
 Long-term identity preservation
 Behavior evolution tracking
@@ -256,64 +123,6 @@ Cross-frame reasoning
 3️ Motion Intelligence Layer
 
 Velocity:
-
-𝑣
-𝑡
-=
-(
-𝑥
-𝑡
-−
-𝑥
-𝑡
-−
-1
-)
-2
-+
-(
-𝑦
-𝑡
-−
-𝑦
-𝑡
-−
-1
-)
-2
-Δ
-𝑡
-v
-t
-	​
-
-=
-Δt
-(x
-t
-	​
-
-−x
-t−1
-	​
-
-)
-2
-+(y
-t
-	​
-
-−y
-t−1
-	​
-
-)
-2
-	​
-
-	​
-
-
 Classified into:
 stationary
 walking
@@ -321,20 +130,6 @@ running
 vehicle_motion
 fast_object
 Scene motion score:
-
-𝑀
-𝑖
-=
-∑
-𝑣
-‾
-M
-i
-	​
-
-=∑
-v
-
 This detects:
 Goals
 Celebrations
@@ -352,41 +147,6 @@ man → speaking_to → woman
 This enables semantic reasoning beyond detection.
 
 5️ Scene Importance Function
-𝐼
-𝑖
-=
-𝛼
-𝑀
-𝑖
-+
-𝛽
-∣
-𝐸
-𝑖
-∣
-+
-𝛾
-∣
-𝑅
-𝑖
-∣
-I
-i
-	​
-
-=αM
-i
-	​
-
-+β∣E
-i
-	​
-
-∣+γ∣R
-i
-	​
-
-∣
 
 Scenes are ranked by:
 Motion intensity
