@@ -1,12 +1,9 @@
 SceneIQ
 Structured Temporal Scene Intelligence for Narrative Video Understanding
 
- The Shift
-Video today is passive.
+The Shift : Video today is passive.
 
-You scroll.
-You scrub.
-You guess timestamps.
+You scroll.You scrub.You guess timestamps.
 
 SceneIQ changes that.
 It transforms video into queryable structured intelligence.
@@ -29,10 +26,9 @@ Interaction inference
 Importance ranking
 
 SceneIQ delivers all five — locally.
-
- Impact Scenario (Judge Attention Section)
+ Impact Scenario (Attention Section)
+ 
  User types:
-
 “Football World Cup trophy celebration”
 
 Within seconds, SceneIQ:
@@ -217,6 +213,70 @@ SceneIQ:
 It shifts video from:
 Frame Intelligence → Moment Intelligence.
 
+File structure:
+SceneIQ/
+│
+├── README.md
+├── demo.mp4
+├── requirements.txt
+├── setup.sh
+├── run.py
+│
+├── config/
+│   ├── model_config.yaml
+│   ├── tracking_config.yaml
+│   └── segmentation_config.yaml
+│
+├── data/
+│   ├── sample_videos/
+│   └── outputs/
+│
+├── src/
+│   ├── pipeline.py
+│   ├── scene_segmentation.py
+│   ├── frame_sampler.py
+│   ├── detection.py
+│   ├── tracking.py
+│   ├── motion_model.py
+│   ├── interaction_model.py
+│   ├── scene_synthesizer.py
+│   ├── semantic_index.py
+│   └── retrieval.py
+│
+├── models/
+│   └── yolov8s.pt
+│
+├── evaluation/
+│   ├── metrics.py
+│   ├── benchmark_results.md
+│   └── test_queries.json
+│
+├── ui/
+│   ├── app.py
+│   └── templates/
+│
+└── docs/
+    ├── architecture.png
+    ├── system_flow.png
+    └── demo_walkthrough.md
+
+
+Core Innovation
+From Frame Detection → To Narrative Intelligence
+
+SceneIQ models video as structured behavioral evolution over time:
+
+Dimension	                 SceneIQ Models
+Entities	               Persistent identity tracking
+Objects	                Multi-object detection
+Motion	                 Velocity-based reasoning
+Interaction	            Spatial relationship inference
+Narrative	              Scene boundary modeling
+Importance             	Scene scoring & ranking
+
+Each scene becomes a semantic unit, not just a timestamp.
+    
+
 Vision
 In the near future:
 Users will not scrub videos.
@@ -226,6 +286,9 @@ They will query them.
 “Professor explaining gradient descent.”
 “Crowd panic moment.”
 SceneIQ is the engine that makes video searchable by meaning.
+
+
+
 
 
 
