@@ -213,53 +213,6 @@ SceneIQ:
 It shifts video from:
 Frame Intelligence → Moment Intelligence.
 
-File structure:
-SceneIQ/
-│
-├── README.md
-├── demo.mp4
-├── requirements.txt
-├── setup.sh
-├── run.py
-│
-├── config/
-│   ├── model_config.yaml
-│   ├── tracking_config.yaml
-│   └── segmentation_config.yaml
-│
-├── data/
-│   ├── sample_videos/
-│   └── outputs/
-│
-├── src/
-│   ├── pipeline.py
-│   ├── scene_segmentation.py
-│   ├── frame_sampler.py
-│   ├── detection.py
-│   ├── tracking.py
-│   ├── motion_model.py
-│   ├── interaction_model.py
-│   ├── scene_synthesizer.py
-│   ├── semantic_index.py
-│   └── retrieval.py
-│
-├── models/
-│   └── yolov8s.pt
-│
-├── evaluation/
-│   ├── metrics.py
-│   ├── benchmark_results.md
-│   └── test_queries.json
-│
-├── ui/
-│   ├── app.py
-│   └── templates/
-│
-└── docs/
-    ├── architecture.png
-    ├── system_flow.png
-    └── demo_walkthrough.md
-
 
 Core Innovation
 From Frame Detection → To Narrative Intelligence
